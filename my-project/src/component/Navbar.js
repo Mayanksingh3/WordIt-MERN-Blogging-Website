@@ -1,41 +1,39 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="/home">
-          Blogger Hub
-        </a>
+      <nav className="navbar navbar-expand-lg navbar-light bg-warning">
         <div
           class="collapse navbar-collapse d-flex justify-content-between"
           id="navbarNav"
         >
+          <a className="navbar-brand b-2" href="/home">
+            WordIt
+          </a>
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="/home">
+              <Link class="nav-link" to="/">
                 Home <span class="sr-only">(current)</span>
-              </a>
+              </Link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/help">
-                Help
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/about">
+              <Link class="nav-link" to="/about">
                 About
-              </a>
+              </Link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/contact">
+              <Link class="nav-link" to="/contact">
                 Contact
-              </a>
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/help">
+                Help
+              </Link>
             </li>
           </ul>
-          <button className="" btn btn-warning>
-            + Add Posts
-          </button>
         </div>
       </nav>
     </div>
