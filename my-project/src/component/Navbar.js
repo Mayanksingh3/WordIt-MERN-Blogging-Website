@@ -1,37 +1,27 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import "../css/navbar.css";
 
 export default function Navbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-warning">
-        <div
-          class="collapse navbar-collapse d-flex justify-content-between"
-          id="navbarNav"
-        >
-          <a className="navbar-brand b-2" href="/home">
-            WordIt
-          </a>
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <Link class="nav-link" to="/">
-                Home <span class="sr-only">(current)</span>
-              </Link>
+        <div className="container-fluid">
+          <ul className="nav navbar-nav">
+            <li className="nav-item">
+              <a href="/" className="nav-link" exact>
+                Home
+              </a>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/about">
+            <li className="nav-item">
+              <a href="/about" className="nav-link" exact>
                 About
-              </Link>
+              </a>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/contact">
+            <li className="nav-item">
+              <a href="/contact" className="nav-link" exact>
                 Contact
-              </Link>
-            </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/help">
-                Help
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
