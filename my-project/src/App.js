@@ -27,7 +27,6 @@ function App() {
             <Navbar />
             <Contact />
           </Route>
-          <Route component={NotFound} />
           <Route exact path="/login">
             <Navbar />
             <Login />
@@ -36,6 +35,7 @@ function App() {
             <Navbar />
             <Signup />
           </Route>
+          <Route component={NotFound} />
         </Switch>
       </div>
     </Router>

@@ -10,22 +10,22 @@ export default function Navbar() {
         <div className="container-fluid">
           <ul className="nav navbar-nav">
             <li className="nav-item">
-              <Link href="/" className="nav-link" exact>
+              <Link to="/" className="nav-link" exact>
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/about" className="nav-link" exact>
+              <Link to="/about" className="nav-link" exact>
                 About
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/contact" className="nav-link" exact>
+              <Link to="/contact" className="nav-link" exact>
                 Contact
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/docs" className="nav-link" exact>
+              <Link to="/docs" className="nav-link" exact>
                 Docs
               </Link>
             </li>
