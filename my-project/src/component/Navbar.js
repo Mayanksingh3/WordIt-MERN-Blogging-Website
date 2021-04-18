@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 import "../css/navbar.css";
 
@@ -9,21 +10,29 @@ export default function Navbar() {
         <div className="container-fluid">
           <ul className="nav navbar-nav">
             <li className="nav-item">
-              <a href="/" className="nav-link" exact>
+              <Link href="/" className="nav-link" exact>
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="/about" className="nav-link" exact>
+              <Link href="/about" className="nav-link" exact>
                 About
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="/contact" className="nav-link" exact>
+              <Link href="/contact" className="nav-link" exact>
                 Contact
-              </a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/docs" className="nav-link" exact>
+                Docs
+              </Link>
             </li>
           </ul>
+          <Link className="btn btn-secondary" to="/login">
+            Login/SignUp
+          </Link>
         </div>
       </nav>
     </div>
