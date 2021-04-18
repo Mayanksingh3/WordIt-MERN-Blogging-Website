@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const userModel = require("./userModel");
 
 const postSchema = mongoose.Schema({
   title: {
@@ -11,7 +12,7 @@ const postSchema = mongoose.Schema({
   },
   paragraph: {
     type: String,
-    required: trues,
+    required: true,
   },
 });
 
