@@ -30,7 +30,7 @@ export default function Navbar() {
               </Link>
             </li>
           </ul>
-          <Link className="btn btn-secondary" to="/login">
+          <Link className="btn btn-secondary" to="/create">
             Login/SignUp
           </Link>
         </div>

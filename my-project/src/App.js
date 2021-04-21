@@ -7,8 +7,10 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import CreatePost from "./component/CreatePost";
+import Post from "./component/Post";
 
-function App() {
+function App(props) {
   return (
     <Router>
       <div className="App ">
@@ -32,6 +34,14 @@ function App() {
           <Route exact path="/signup">
             <Navbar />
             <Signup />
+          </Route>
+          <Route exact path="/create">
+            <Navbar />
+            <CreatePost />
+          </Route>
+          <Route exact path="/post/:id">
+            <Navbar />
+            <Post {...props} />
           </Route>
           <Route component={NotFound} />
         </Switch>

@@ -7,7 +7,7 @@ import "../css/homeStyle.css";
 export default function Home() {
   const [posts, setPosts] = useState([]);
   const [followed, setFollowed] = useState();
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(2);
   useEffect(() => {
     axios
       .get("http://localhost:5000/posts")
@@ -20,7 +20,7 @@ export default function Home() {
   });
   return (
     <div className="container">
-      <div className="card-header mt-2 mb-3">Featured</div>
+      <div className="card-header mt-2 mb-3">Latest Posts</div>
       {!posts.length ? (
         <div className="spinner-parent">
           <img className="img-fluid spinner" src={spinner} alt="Loading..." />
