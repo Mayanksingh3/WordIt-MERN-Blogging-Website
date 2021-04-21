@@ -2,7 +2,7 @@ import React from "react";
 
 export default function PostsList(props) {
   return (
-    <div href="/about" className="container">
+    <div href="/about" className="container-fluid m-3">
       <div className="card">
         <div className="card-body">
           <h3 className="card-title">{props.article.title}</h3>

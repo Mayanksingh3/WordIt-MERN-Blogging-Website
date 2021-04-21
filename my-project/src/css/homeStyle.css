@@ -1,0 +1,9 @@
+.spinner {
+  width: 300px;
+  height: 300px;
+}
+.spinner-parent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
