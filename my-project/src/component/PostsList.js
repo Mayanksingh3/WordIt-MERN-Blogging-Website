@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 export default function PostsList(props) {
+  const [article, setArticle] = useState([]);
+
+  const deletePost = (id) => {
+    axios
+      .delete("http://localhost:5000/posts/delete/" + id)
+      .then((res) => {
+        alert(res.data);
+        setArticle(article.filter((elem) => elem._id !== id));
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <div href="/about" className="container-fluid m-3">
       <div className="card">
@@ -12,10 +26,19 @@ export default function PostsList(props) {
           <h5 className="card-text">{props.article.paragraph}</h5>
           <p>{props.article.createdAt}</p>
           <div className="d-flex justify-content-between">
-            <button className="btn btn-outline-warning" type="">
+            <Link
+              to={{ pathname: "/edit/" + props.article._id }}
+              className="btn btn-outline-warning"
+              type=""
+            >
               Edit Article
-            </button>
-            <button className="btn btn-outline-danger" type="">
+            </Link>
+            <button
+              onClick={() => {
+                deletePost(props.article._id);
+              }}
+              className="btn btn-outline-danger"
+            >
               Delete Article
             </button>
           </div>

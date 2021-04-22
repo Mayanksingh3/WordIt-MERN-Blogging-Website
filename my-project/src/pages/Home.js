@@ -31,7 +31,7 @@ export default function Home() {
         })
       )}
       <button
-        className="btn btn-primary mt-3"
+        className="btn btn-primary mt-3 mb-3"
         onClick={() => {
           setCount(count + 3);
         }}

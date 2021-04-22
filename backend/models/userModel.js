@@ -13,7 +13,10 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  following: [String],
+  following: {
+    type: [String],
+    default: [],
+  },
 });
 
 module.exports = User = mongoose.model("user", userSchema);

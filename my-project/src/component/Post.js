@@ -3,6 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router";
 import spinner from "../assets/spinner.gif";
 import "../css/homeStyle.css";
+import { Link } from "react-router-dom";
 
 export default function Post() {
   const [title, setTitle] = useState("");
@@ -34,6 +35,9 @@ export default function Post() {
           <h1>{title}</h1>
           <h3>{paragraph}</h3>
           <p>{date}</p>
+          <Link type="" className="btn btn-primary" to="/">
+            Back to Home
+          </Link>
         </div>
       )}
     </div>

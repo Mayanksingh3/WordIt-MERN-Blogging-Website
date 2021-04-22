@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import CreatePost from "./component/CreatePost";
 import Post from "./component/Post";
+import EditPost from "./component/EditPost";
 
 function App(props) {
   return (
@@ -42,6 +43,10 @@ function App(props) {
           <Route exact path="/post/:id">
             <Navbar />
             <Post {...props} />
+          </Route>
+          <Route exact path="/edit/:id">
+            <Navbar />
+            <EditPost />
           </Route>
           <Route component={NotFound} />
         </Switch>
