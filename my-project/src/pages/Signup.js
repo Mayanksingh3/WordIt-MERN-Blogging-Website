@@ -18,7 +18,7 @@ export default function Signup() {
       .then((res) => {
         if (res.data.isLogged) {
           sessionStorage.setItem("isLogged", true);
-          sessionStorage.setItem("usename", username);
+          sessionStorage.setItem("username", username);
           window.location = "/";
         }
       })
