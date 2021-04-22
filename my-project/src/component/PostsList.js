@@ -25,6 +25,7 @@ export default function PostsList(props) {
           </Link>
           <h5 className="card-text">{props.article.paragraph}</h5>
           <p>{props.article.createdAt}</p>
+          <p>{props.article.author}</p>
           {!props.own ? (
             ""
           ) : (

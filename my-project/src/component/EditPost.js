@@ -13,7 +13,7 @@ export default function EditPost() {
     const newArticle = {
       title: title,
       paragraph: paragraph,
-      email: sessionStorage.getItem("email"),
+      email: sessionStorage.getItem("id"),
       author: sessionStorage.getItem("username"),
     };
     setTitle("");
@@ -38,6 +38,7 @@ export default function EditPost() {
       .catch((err) => {
         console.log(err);
       });
+    // eslint-disable-next-line
   }, {});
   return (
     <div className="container mt-4">

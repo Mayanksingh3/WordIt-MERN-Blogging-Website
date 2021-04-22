@@ -10,7 +10,6 @@ import Signup from "./pages/Signup";
 import CreatePost from "./component/CreatePost";
 import Post from "./component/Post";
 import EditPost from "./component/EditPost";
-import { useContext, useState } from "react";
 
 function App(props) {
   return (
