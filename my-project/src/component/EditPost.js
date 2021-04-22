@@ -11,8 +11,10 @@ export default function EditPost() {
   const submitTheData = (e) => {
     e.preventDefault();
     const newArticle = {
-      title,
-      paragraph,
+      title: title,
+      paragraph: paragraph,
+      email: sessionStorage.getItem("email"),
+      author: sessionStorage.getItem("username"),
     };
     setTitle("");
     setParagraph("");

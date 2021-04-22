@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 import "../css/navbar.css";
 
-export default function Navbar(props) {
+export default function Navbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-warning">
@@ -43,6 +43,7 @@ export default function Navbar(props) {
                 onClick={() => {
                   sessionStorage.removeItem("isLogged");
                   sessionStorage.removeItem("username");
+                  sessionStorage.removeItem("id");
                   window.location = "/";
                 }}
               >

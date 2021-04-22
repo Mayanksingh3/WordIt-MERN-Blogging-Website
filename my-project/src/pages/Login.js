@@ -17,6 +17,7 @@ export default function Login() {
       .then((res) => {
         sessionStorage.setItem("isLogged", res.data.isLogged);
         sessionStorage.setItem("username", res.data.username);
+        sessionStorage.setItem("id", res.data.id);
         console.log(res.data.isLogged);
         window.location = "/";
       })

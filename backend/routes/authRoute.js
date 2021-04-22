@@ -37,7 +37,11 @@ router.post("/signin", (req, res) => {
       if (foundUser) {
         if (foundUser.password === req.body.password) {
           console.log("User Logged In : " + foundUser.email);
-          res.json({ isLogged: true, username: foundUser.username });
+          res.json({
+            isLogged: true,
+            username: foundUser.username,
+            id: foundUser._id,
+          });
         } else {
           console.log("User Entered Wrong Password");
           res.json({ isLogged: false });

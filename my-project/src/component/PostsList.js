@@ -25,23 +25,27 @@ export default function PostsList(props) {
           </Link>
           <h5 className="card-text">{props.article.paragraph}</h5>
           <p>{props.article.createdAt}</p>
-          <div className="d-flex justify-content-between">
-            <Link
-              to={{ pathname: "/edit/" + props.article._id }}
-              className="btn btn-outline-warning"
-              type=""
-            >
-              Edit Article
-            </Link>
-            <button
-              onClick={() => {
-                deletePost(props.article._id);
-              }}
-              className="btn btn-outline-danger"
-            >
-              Delete Article
-            </button>
-          </div>
+          {!props.own ? (
+            ""
+          ) : (
+            <div className="d-flex justify-content-between">
+              <Link
+                to={{ pathname: "/edit/" + props.article._id }}
+                className="btn btn-outline-warning"
+                type=""
+              >
+                Edit Article
+              </Link>
+              <button
+                onClick={() => {
+                  deletePost(props.article._id);
+                }}
+                className="btn btn-outline-danger"
+              >
+                Delete Article
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>

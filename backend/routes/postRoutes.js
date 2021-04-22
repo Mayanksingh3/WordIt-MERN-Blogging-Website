@@ -14,6 +14,8 @@ router.post("/create", (req, res) => {
   const newPost = new Post({
     title: req.body.title,
     paragraph: req.body.paragraph,
+    email: req.body.email,
+    author: req.body.author,
   });
   newPost
     .save()
@@ -26,8 +28,8 @@ router.post("/create", (req, res) => {
     });
 });
 
-router.get("/:id", (req, res) => {
-  Post.findById(req.params.id)
+router.get("/own/:id", (req, res) => {
+  Post.find({ email: req.params.id })
     .then((post) => {
       console.log(post);
       res.json(post);
@@ -41,7 +43,8 @@ router.put("/update/:id", (req, res) => {
   Post.findById(req.params.id).then((post) => {
     post.title = req.body.title;
     post.paragraph = req.body.paragraph;
-
+    post.email = req.body.email;
+    post.author = req.body.author;
     post
       .save()
       .then(() => {

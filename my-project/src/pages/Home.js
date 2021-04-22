@@ -6,7 +6,7 @@ import "../css/homeStyle.css";
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
-  const [followed, setFollowed] = useState();
+  const [ownPost, setOwnPost] = useState([]);
   const [count, setCount] = useState(2);
   useEffect(() => {
     axios
@@ -17,6 +17,17 @@ export default function Home() {
       .catch((err) => {
         console.log(err);
       });
+    if (sessionStorage.getItem("isLogged")) {
+      axios
+        .get("http://localhost:5000/posts/own/" + sessionStorage.getItem("id"))
+        .then((res) => {
+          setOwnPost(res.data.reverse());
+          console.log(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
   });
   return (
     <div className="container">
@@ -27,7 +38,7 @@ export default function Home() {
         </div>
       ) : (
         posts.slice(0, count).map((post, key) => {
-          return <PostsList key={key} article={post} />;
+          return <PostsList own={false} key={key} article={post} />;
         })
       )}
       <button
@@ -39,7 +50,13 @@ export default function Home() {
         Show More
       </button>
       <div className="card-header mb-3">Your Posts</div>
-      {!followed ? <div>None to Show</div> : <div>Showing</div>}
+      {!ownPost.length ? (
+        <div>None to Show</div>
+      ) : (
+        ownPost.slice(0, count).map((post, key) => {
+          return <PostsList own={true} key={key} article={post} />;
+        })
+      )}
     </div>
   );
 }

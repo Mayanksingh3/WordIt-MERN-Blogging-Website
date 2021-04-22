@@ -8,8 +8,10 @@ export default function CreatePost() {
   const submitTheData = (e) => {
     e.preventDefault();
     const newArticle = {
-      title,
-      paragraph,
+      title: title,
+      paragraph: paragraph,
+      email: sessionStorage.getItem("id"),
+      author: sessionStorage.getItem("username"),
     };
     setTitle("");
     setParagraph("");

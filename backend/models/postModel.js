@@ -14,6 +14,14 @@ const postSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  email: {
+    type: String,
+    required: true,
+  },
+  author: {
+    type: String,
+    required: true,
+  },
 });
 
 module.exports = Post = mongoose.model("post", postSchema);
