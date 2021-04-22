@@ -39,6 +39,17 @@ router.get("/own/:id", (req, res) => {
     });
 });
 
+router.get("/:id", (req, res) => {
+  Post.findById(req.params.id)
+    .then((post) => {
+      console.log(post);
+      res.json(post);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
 router.put("/update/:id", (req, res) => {
   Post.findById(req.params.id).then((post) => {
     post.title = req.body.title;
