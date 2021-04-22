@@ -38,7 +38,7 @@ export default function Home() {
       >
         Show More
       </button>
-      <div className="card-header mb-3">Your Following</div>
+      <div className="card-header mb-3">Your Posts</div>
       {!followed ? <div>None to Show</div> : <div>Showing</div>}
     </div>
   );

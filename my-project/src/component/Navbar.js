@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 import "../css/navbar.css";
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-warning">
@@ -30,9 +30,30 @@ export default function Navbar() {
               </Link>
             </li>
           </ul>
-          <Link className="btn btn-secondary" to="/login">
-            Login/SignUp
-          </Link>
+          {sessionStorage.getItem("isLogged") ? (
+            <div className="d-flex align-items-center">
+              <div className="mr-3">
+                Welcome! {sessionStorage.getItem("username")}
+              </div>
+              <Link className="btn btn-light mr-3" to="/create">
+                + Add Article
+              </Link>
+              <Link
+                className="btn btn-danger"
+                onClick={() => {
+                  sessionStorage.removeItem("isLogged");
+                  sessionStorage.removeItem("username");
+                  window.location = "/";
+                }}
+              >
+                Logout
+              </Link>
+            </div>
+          ) : (
+            <Link className="btn btn-secondary" to="/login">
+              Login/SignUp
+            </Link>
+          )}
         </div>
       </nav>
     </div>

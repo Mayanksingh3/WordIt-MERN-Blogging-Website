@@ -1,16 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const loginCheck = (e) => {
+    e.preventDefault();
+    const user = {
+      email: email,
+      password: password,
+    };
+    axios
+      .post("http://localhost:5000/user/signin", user)
+      .then((res) => {
+        sessionStorage.setItem("isLogged", res.data.isLogged);
+        sessionStorage.setItem("username", res.data.username);
+        console.log(res.data.isLogged);
+        window.location = "/";
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div className="container">
-      <form>
+      <form onSubmit={loginCheck}>
         <div className="form-group">
           <label htmlFor="exampleInputEmail1">Email address</label>
           <input
             type="email"
             className="form-control"
             id="exampleInputEmail1"
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
             aria-describedby="emailHelp"
             placeholder="Enter email"
           />
@@ -23,6 +49,9 @@ export default function Login() {
           <input
             type="password"
             className="form-control"
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
             id="exampleInputPassword1"
             placeholder="Password"
           />
