@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import "../css/loginCss.css";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -28,52 +29,57 @@ export default function Login() {
 
   return (
     <div className="container">
-      <form onSubmit={loginCheck}>
-        <div className="form-group">
-          <label htmlFor="exampleInputEmail1">Email address</label>
-          <input
-            type="email"
-            className="form-control"
-            id="exampleInputEmail1"
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-            aria-describedby="emailHelp"
-            placeholder="Enter email"
-          />
-          <small id="emailHelp" className="form-text text-muted">
-            We'll never share your email with anyone else.
-          </small>
+      <div className="main">
+        <div className="left"></div>
+        <div className="right">
+          <div className="banner">
+            <h2>Login</h2>
+          </div>
+          <form className="container" onSubmit={loginCheck}>
+            <div className="form-group">
+              <label htmlFor="exampleInputEmail1">Email address</label>
+              <input
+                type="email"
+                required
+                className="form-control"
+                id="exampleInputEmail1"
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+                aria-describedby="emailHelp"
+                placeholder="Enter email"
+              />
+              <small id="emailHelp" className="form-text text-muted">
+                We'll never share your email with anyone else.
+              </small>
+            </div>
+            <div className="form-group">
+              <label htmlFor="exampleInputPassword1">Password</label>
+              <input
+                type="password"
+                required
+                className="form-control"
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                }}
+                id="exampleInputPassword1"
+                placeholder="Password"
+              />
+            </div>
+            <p className="d-flex justify-content-end">
+              Don't have an account. Signup now!
+            </p>
+            <div className="d-flex justify-content-end">
+              <button type="submit" className="btn btn-primary mr-3">
+                Submit
+              </button>
+              <Link to="/signup" className="btn btn-outline-primary">
+                SignUp
+              </Link>
+            </div>
+          </form>
         </div>
-        <div className="form-group">
-          <label htmlFor="exampleInputPassword1">Password</label>
-          <input
-            type="password"
-            className="form-control"
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
-            id="exampleInputPassword1"
-            placeholder="Password"
-          />
-        </div>
-        <div className="form-group form-check">
-          <input
-            type="checkbox"
-            className="form-check-input"
-            id="exampleCheck1"
-          />
-          <label className="form-check-label" htmlFor="exampleCheck1">
-            Check me out
-          </label>
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-        <Link to="/signup" className="btn btn-primary">
-          SignUp
-        </Link>
-      </form>
+      </div>
     </div>
   );
 }
