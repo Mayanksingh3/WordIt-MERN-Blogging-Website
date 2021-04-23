@@ -49,44 +49,48 @@ export default function Post() {
   };
 
   return (
-    <div className="container">
+    <div className="container card">
       {!title && !paragraph && !date ? (
         <div className="spinner-parent">
           <img className="spinner" src={spinner} alt="Loading..." />
         </div>
       ) : (
-        <div>
-          <h1>{title}</h1>
-          <h3>{paragraph}</h3>
+        <div className="card mt-3 p-2">
+          <h1 className="card-title">{title}</h1>
+          <p>{paragraph}</p>
+          <h5>{author}</h5>
           <p>{date}</p>
-          <p>{author}</p>
-          <Link type="" className="btn btn-primary" to="/">
+          <Link type="" className="btn btn-primary mb-3" to="/">
             Back to Home
           </Link>
           <div>
             <div>
+              <h3>Comments : </h3>
               {comments.map((comment, key) => {
                 return (
-                  <div>
-                    <h2>{comment.comment}</h2>
-                    <p>{comment.author}</p>
+                  <div className="d-flex">
+                    <h5>{comment.author} : </h5>
+                    <p> {comment.comment}</p>
                   </div>
                 );
               })}
             </div>
             {!sessionStorage.getItem("isLogged") ? (
-              <div className="container">Login to Comment</div>
+              <div className="d-flex justify-content-center pb-3">
+                Login to Comment
+              </div>
             ) : (
               <form onSubmit={commentAdd}>
                 <input
                   className="form-control"
                   value={message}
                   required
+                  placeholder="Add Comment ..."
                   onChange={(e) => {
                     setMessage(e.target.value);
                   }}
                 />
-                <button className="btn btn-primary" type="submit">
+                <button className="btn btn-primary mt-2" type="submit">
                   Comment
                 </button>
               </form>

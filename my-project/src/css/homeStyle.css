@@ -8,3 +8,6 @@
   display: flex;
   justify-content: center;
 }
+.text-dark:hover {
+  color: blue !important;
+}

@@ -18,7 +18,10 @@ export default function PostsList(props) {
   };
   return (
     <div className="card mt-1 card-body">
-      <Link to={{ pathname: "/post/" + props.article._id }}>
+      <Link
+        className="text-dark"
+        to={{ pathname: "/post/" + props.article._id }}
+      >
         <h2 className="card-title">{props.article.title}</h2>
       </Link>
       <p className="card-text">{props.article.paragraph}</p>
