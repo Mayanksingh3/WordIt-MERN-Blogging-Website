@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const Post = require("../models/postModel");
+
 router.get("/", (req, res) => {
   Post.find()
     .then((posts) => {
@@ -7,6 +8,26 @@ router.get("/", (req, res) => {
     })
     .catch((err) => {
       res.status(400).res.json({ Error: "${err}" });
+    });
+});
+
+router.put("/comment-add/:id", (req, res) => {
+  Post.findOne({ _id: req.params.id })
+    .then((foundPost) => {
+      const newComment = { author: req.body.author, comment: req.body.comment };
+      foundPost.comment.push(newComment);
+      foundPost
+        .save()
+        .then(() => {
+          console.log("Post's Comment Added Successfully ");
+          res.json(foundPost.comment);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    })
+    .catch((err) => {
+      console.log(err);
     });
 });
 
@@ -31,7 +52,6 @@ router.post("/create", (req, res) => {
 router.get("/own/:id", (req, res) => {
   Post.find({ email: req.params.id })
     .then((post) => {
-      console.log(post);
       res.json(post);
     })
     .catch((err) => {
@@ -42,7 +62,6 @@ router.get("/own/:id", (req, res) => {
 router.get("/:id", (req, res) => {
   Post.findById(req.params.id)
     .then((post) => {
-      console.log(post);
       res.json(post);
     })
     .catch((err) => {
