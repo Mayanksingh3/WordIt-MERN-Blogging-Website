@@ -4,6 +4,7 @@ import axios from "axios";
 export default function CreatePost() {
   const [title, setTitle] = useState("");
   const [paragraph, setParagraph] = useState("");
+  const [message, setMessage] = useState("");
 
   const submitTheData = (e) => {
     e.preventDefault();
@@ -19,9 +20,11 @@ export default function CreatePost() {
       .post("http://localhost:5000/posts/create", newArticle)
       .then((res) => {
         console.log(res.data);
+        setMessage("Article Added Successfully");
       })
       .catch((err) => {
         console.log(err);
+        setMessage("Some Error Occured. Try Again");
       });
   };
 
@@ -32,6 +35,7 @@ export default function CreatePost() {
           <label htmlFor="InputEmail1">Title</label>
           <input
             type="text"
+            required
             value={title}
             onChange={(e) => {
               setTitle(e.target.value);
@@ -44,11 +48,13 @@ export default function CreatePost() {
           <textarea
             value={paragraph}
             className="form-control"
+            required
             onChange={(e) => {
               setParagraph(e.target.value);
             }}
           />
         </div>
+        <h3 className="text-danger">{message}</h3>
         <button type="submit" className="btn btn-primary">
           Post Article
         </button>

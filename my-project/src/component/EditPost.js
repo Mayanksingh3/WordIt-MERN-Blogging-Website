@@ -22,7 +22,7 @@ export default function EditPost() {
       .put("http://localhost:5000/posts/update/" + id, newArticle)
       .then((res) => {
         console.log(res.data);
-        setMessage("Updated");
+        setMessage("Article Updated Successfully");
       })
       .catch((err) => {
         console.log(err);
@@ -48,6 +48,7 @@ export default function EditPost() {
           <input
             type="text"
             value={title}
+            required
             onChange={(e) => {
               setTitle(e.target.value);
             }}
@@ -59,12 +60,13 @@ export default function EditPost() {
           <textarea
             value={paragraph}
             className="form-control"
+            required
             onChange={(e) => {
               setParagraph(e.target.value);
             }}
           />
         </div>
-        <h3>{message}</h3>
+        <h3 className="text-secondary">{message}</h3>
         <button type="submit" className="btn btn-primary">
           Post Article
         </button>
