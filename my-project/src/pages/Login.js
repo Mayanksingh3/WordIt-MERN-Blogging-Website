@@ -71,7 +71,7 @@ export default function Login() {
             </p>
             <div className="d-flex justify-content-end">
               <button type="submit" className="btn btn-primary mr-3">
-                Submit
+                Login
               </button>
               <Link to="/signup" className="btn btn-outline-primary">
                 SignUp
