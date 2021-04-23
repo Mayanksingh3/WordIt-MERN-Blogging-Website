@@ -17,38 +17,35 @@ export default function PostsList(props) {
       });
   };
   return (
-    <div href="/about" className="container-fluid m-3">
-      <div className="card">
-        <div className="card-body">
-          <Link to={{ pathname: "/post/" + props.article._id }}>
-            <h3 className="card-title">{props.article.title}</h3>
+    <div className="card mt-1 card-body">
+      <Link to={{ pathname: "/post/" + props.article._id }}>
+        <h2 className="card-title">{props.article.title}</h2>
+      </Link>
+      <p className="card-text">{props.article.paragraph}</p>
+      <h5>{props.article.author}</h5>
+      <p>{props.article.createdAt}</p>
+
+      {!props.own ? (
+        ""
+      ) : (
+        <div className="d-flex justify-content-between">
+          <Link
+            to={{ pathname: "/edit/" + props.article._id }}
+            className="btn btn-outline-warning"
+            type=""
+          >
+            Edit Article
           </Link>
-          <h5 className="card-text">{props.article.paragraph}</h5>
-          <p>{props.article.createdAt}</p>
-          <p>{props.article.author}</p>
-          {!props.own ? (
-            ""
-          ) : (
-            <div className="d-flex justify-content-between">
-              <Link
-                to={{ pathname: "/edit/" + props.article._id }}
-                className="btn btn-outline-warning"
-                type=""
-              >
-                Edit Article
-              </Link>
-              <button
-                onClick={() => {
-                  deletePost(props.article._id);
-                }}
-                className="btn btn-outline-danger"
-              >
-                Delete Article
-              </button>
-            </div>
-          )}
+          <button
+            onClick={() => {
+              deletePost(props.article._id);
+            }}
+            className="btn btn-outline-danger"
+          >
+            Delete Article
+          </button>
         </div>
-      </div>
+      )}
     </div>
   );
 }

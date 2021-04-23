@@ -30,7 +30,7 @@ export default function Home() {
     }
   });
   return (
-    <div className="container">
+    <div className="container card">
       <div className="card-header mt-2 mb-3">Latest Posts</div>
       {!posts.length ? (
         <div className="spinner-parent">
@@ -41,17 +41,19 @@ export default function Home() {
           return <PostsList own={false} key={key} article={post} />;
         })
       )}
-      <button
-        className="btn btn-primary mt-3 mb-3"
-        onClick={() => {
-          setCount(count + 3);
-        }}
-      >
-        Show More
-      </button>
+      <div className="d-flex justify-content-center">
+        <button
+          className="btn btn-primary mt-3 mb-3"
+          onClick={() => {
+            setCount(count + 3);
+          }}
+        >
+          Show More
+        </button>
+      </div>
       <div className="card-header mb-3">Your Posts</div>
       {!ownPost.length ? (
-        <div>None to Show</div>
+        <div className="d-flex justify-content-center pb-3">None to Show</div>
       ) : (
         ownPost.slice(0, count).map((post, key) => {
           return <PostsList own={true} key={key} article={post} />;
