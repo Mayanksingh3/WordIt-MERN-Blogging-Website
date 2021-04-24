@@ -5,7 +5,7 @@ import mern from "../assets/mern.jpg";
 export default function About() {
   return (
     <div className="container mt-3">
-      <div className="card p-3 main-body">
+      <div className="card p-3 mb-3 main-body">
         <div className="banner bg-warning">
           <h1>Hello, Welcome to our About Page!</h1>
         </div>

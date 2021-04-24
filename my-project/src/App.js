@@ -10,6 +10,7 @@ import Signup from "./pages/Signup";
 import CreatePost from "./component/CreatePost";
 import Post from "./component/Post";
 import EditPost from "./component/EditPost";
+import Docs from "./pages/Docs";
 
 function App(props) {
   return (
@@ -47,6 +48,10 @@ function App(props) {
           <Route exact path="/edit/:id">
             <Navbar />
             <EditPost />
+          </Route>
+          <Route exact path="/docs">
+            <Navbar />
+            <Docs />
           </Route>
           <Route component={NotFound} />
         </Switch>

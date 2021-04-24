@@ -1,0 +1,8 @@
+.list {
+  flex-direction: column;
+}
+
+.list {
+  list-style: circle;
+  margin: 0 0 5px 20px;
+}
