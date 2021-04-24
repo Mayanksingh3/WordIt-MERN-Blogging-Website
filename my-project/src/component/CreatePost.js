@@ -29,7 +29,10 @@ export default function CreatePost() {
   };
 
   return (
-    <div className="container mt-4">
+    <div className="container card p-3 mt-4">
+      <div>
+        <h2>Create an Article</h2>
+      </div>
       <form onSubmit={submitTheData} encType="multipart/form-data">
         <div className="form-group">
           <label htmlFor="InputEmail1">Title</label>
@@ -54,10 +57,13 @@ export default function CreatePost() {
             }}
           />
         </div>
-        <h3 className="text-danger">{message}</h3>
-        <button type="submit" className="btn btn-primary">
-          Post Article
-        </button>
+        {message ? (
+          <h3 className="text-danger">{message}</h3>
+        ) : (
+          <button type="submit" className="btn btn-primary">
+            Post Article
+          </button>
+        )}
       </form>
     </div>
   );

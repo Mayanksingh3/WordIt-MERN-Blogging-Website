@@ -7,6 +7,7 @@ export default function Signup() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const submitData = (e) => {
     e.preventDefault();
@@ -23,6 +24,10 @@ export default function Signup() {
           sessionStorage.setItem("username", username);
           sessionStorage.setItem("email", res.data.id);
           window.location = "/";
+        } else {
+          setMessage(
+            "Some Error Occurred/User with Email Already Present. Try Again!"
+          );
         }
       })
       .catch((err) => {
@@ -80,6 +85,7 @@ export default function Signup() {
                 placeholder="Password"
               />
             </div>
+            <p className="text-danger">{message}</p>
             <div className="d-flex justify-content-end">
               <p>Already have an Account. Login now!</p>
             </div>

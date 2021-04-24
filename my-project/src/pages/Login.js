@@ -6,6 +6,7 @@ import "../css/loginCss.css";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
 
   const loginCheck = (e) => {
     e.preventDefault();
@@ -16,11 +17,15 @@ export default function Login() {
     axios
       .post("http://localhost:5000/user/signin", user)
       .then((res) => {
-        sessionStorage.setItem("isLogged", res.data.isLogged);
-        sessionStorage.setItem("username", res.data.username);
-        sessionStorage.setItem("id", res.data.id);
-        console.log(res.data.isLogged);
-        window.location = "/";
+        if (res.data.isLogged) {
+          sessionStorage.setItem("isLogged", res.data.isLogged);
+          sessionStorage.setItem("username", res.data.username);
+          sessionStorage.setItem("id", res.data.id);
+          console.log(res.data.isLogged);
+          window.location = "/";
+        } else {
+          setMessage("User Email/Password is Incorrect. Try Again!");
+        }
       })
       .catch((err) => {
         console.log(err);
@@ -66,6 +71,7 @@ export default function Login() {
                 placeholder="Password"
               />
             </div>
+            <p className="text-danger">{message}</p>
             <p className="d-flex justify-content-end">
               Don't have an account. Signup now!
             </p>

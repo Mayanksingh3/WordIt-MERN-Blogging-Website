@@ -41,7 +41,10 @@ export default function EditPost() {
     // eslint-disable-next-line
   }, {});
   return (
-    <div className="container mt-4">
+    <div className="container p-3 card mt-4">
+      <div>
+        <h2>Edit Article</h2>
+      </div>
       <form onSubmit={submitTheData} encType="multipart/form-data">
         <div className="form-group">
           <label htmlFor="InputEmail1">Title</label>
@@ -66,10 +69,14 @@ export default function EditPost() {
             }}
           />
         </div>
-        <h3 className="text-secondary">{message}</h3>
-        <button type="submit" className="btn btn-primary">
-          Post Article
-        </button>
+
+        {message ? (
+          <h3 className="text-secondary">{message}</h3>
+        ) : (
+          <button type="submit" className="btn btn-primary">
+            Post Article
+          </button>
+        )}
       </form>
     </div>
   );

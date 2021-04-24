@@ -1,36 +1,6 @@
 const router = require("express").Router();
 const User = require("../models/userModel");
 
-router.get("/following/:id", (req, res) => {
-  User.findOne({ _id: req.params.id })
-    .then((foundUser) => {
-      res.json(foundUser.following);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.json("Not Found");
-    });
-});
-
-router.put("/follower-add/:id", (req, res) => {
-  User.findOne({ _id: req.params.id })
-    .then((foundUser) => {
-      foundUser.following.push(req.body.followingId);
-      foundUser
-        .save()
-        .then(() => {
-          console.log("User Updated Successfully");
-          res.json("Done");
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-
 router.post("/signin", (req, res) => {
   User.findOne({ email: req.body.email })
     .then((foundUser) => {
@@ -62,6 +32,17 @@ router.post("/signup", (req, res) => {
     password: req.body.password,
     email: req.body.email,
   });
+  User.findOne({ email: req.body.email })
+    .then((found) => {
+      if (found) {
+        console.log("User Already Present with email : " + req.body.email);
+        res.send({ isLogged: false });
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+      res.send({ isLogged: false });
+    });
   newUser
     .save()
     .then(() => {

@@ -8,6 +8,7 @@ export default function Home() {
   const [posts, setPosts] = useState([]);
   const [ownPost, setOwnPost] = useState([]);
   const [count, setCount] = useState(2);
+  const [count2, setCount2] = useState(2);
   useEffect(() => {
     axios
       .get("http://localhost:5000/posts")
@@ -55,9 +56,23 @@ export default function Home() {
       {!ownPost.length ? (
         <div className="d-flex justify-content-center pb-3">None to Show</div>
       ) : (
-        ownPost.slice(0, count).map((post, key) => {
+        ownPost.slice(0, count2).map((post, key) => {
           return <PostsList own={true} key={key} article={post} />;
         })
+      )}
+      {!ownPost.length ? (
+        ""
+      ) : (
+        <div className="d-flex justify-content-center">
+          <button
+            className="btn btn-primary mt-3 mb-3"
+            onClick={() => {
+              setCount2(count2 + 3);
+            }}
+          >
+            Show More
+          </button>
+        </div>
       )}
     </div>
   );
