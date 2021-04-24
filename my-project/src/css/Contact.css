@@ -1,0 +1,10 @@
+.skill {
+  list-style: circle;
+}
+.skill li {
+  list-style: circle;
+  margin: 8px 10px 8px 15px;
+}
+.margin {
+  margin: 30px 0;
+}
