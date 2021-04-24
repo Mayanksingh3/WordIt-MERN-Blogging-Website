@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 50%;
+  height: 100%;
+}
+.mern ul {
+  flex-direction: column;
+}
+.mern li {
+  list-style: circle;
+  margin: 6px 0 6px 15px;
+}
