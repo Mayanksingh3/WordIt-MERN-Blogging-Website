@@ -45,9 +45,10 @@ router.post("/signup", (req, res) => {
     });
   newUser
     .save()
-    .then(() => {
+    .then((e) => {
       console.log("User added Successfully");
-      res.send({ isLogged: true });
+      console.log(e);
+      res.send({ isLogged: true, id: e._id });
     })
     .catch((err) => {
       console.log(err);

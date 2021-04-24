@@ -22,7 +22,7 @@ export default function Signup() {
         if (res.data.isLogged) {
           sessionStorage.setItem("isLogged", true);
           sessionStorage.setItem("username", username);
-          sessionStorage.setItem("email", res.data.id);
+          sessionStorage.setItem("id", res.data.id);
           window.location = "/";
         } else {
           setMessage(
