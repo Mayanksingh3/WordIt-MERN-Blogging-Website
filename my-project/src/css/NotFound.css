@@ -1,0 +1,8 @@
+.body-not {
+  display: flex;
+  justify-content: center;
+}
+.not img {
+  width: 60%;
+  height: 60%;
+}
