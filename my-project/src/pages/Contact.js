@@ -2,7 +2,6 @@ import React from "react";
 import me from "../assets/mayank.jpg";
 import "../css/Contact.css";
 import { GoMail, GoMarkGithub } from "react-icons/go";
-import { Link } from "react-router-dom";
 import { GrLinkedin } from "react-icons/gr";
 
 export default function Contact() {
@@ -26,6 +25,7 @@ export default function Contact() {
             <h4>Contact Me :</h4>
             <a
               className="text-dark"
+              rel="noreferrer"
               target="_blank"
               href="mailto:mayank.singh1_cs18@gla.ac.in"
             >
@@ -33,6 +33,7 @@ export default function Contact() {
             </a>
             <a
               className="text-dark"
+              rel="noreferrer"
               target="_blank"
               href="https://www.github.com/Mayanksingh2004"
             >
@@ -40,6 +41,7 @@ export default function Contact() {
             </a>
             <a
               className="text-dark"
+              rel="noreferrer"
               target="_blank"
               href="https://www.linkedin.com/in/mayank-singh-27a3ba181/"
             >

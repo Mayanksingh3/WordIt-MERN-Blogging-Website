@@ -13,7 +13,7 @@ app.use("/user", require("./routes/authRoute"));
 const PORT = process.env.PORT || 5000;
 
 mongoose
-  .connect(process.env.mongoDB_URI, {
+  .connect(process.env.mongoDB_URI || process.env.mongoDB_LOCAL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: true,
