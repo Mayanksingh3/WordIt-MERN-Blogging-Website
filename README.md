@@ -2,13 +2,13 @@
 Hello, Welcome to our Docs!
 
 ## Getting Started
-**Table of Contents**
+** Table of Contents **
 
-[TOCM]
+[ TOCM ]
 
-[TOC]
+[ TOC ]
 
-###Info :
+### Info :
 - WordIt is a MERN Blogging website.
 - This is a blogging website where users cant create, edit ,delete and comment on the post
 - Users are required to login first inorder to create and comment on posts.
@@ -37,7 +37,7 @@ Some of the libraries used in the development of this web application are as fol
 - nodemon - nodemon is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory.
 
 
-##Installation
+## Installation
 - Fork this repo and run the git clone command from your terminal/bash
 - Create a `.env` file in the backend directory
 	- mongoDB_URI - Insert the correct connection URL for your MongoDB database
@@ -45,7 +45,7 @@ Some of the libraries used in the development of this web application are as fol
 	- mongoDB_LOCAL - Insert the correct connection URL for your MongoDB database local
 `mongodb://localhost:27017/BlogDB`
 
-####Backend
+#### Backend
 - cd into backend and write npm install or npm i in command terminal
 
 	```
@@ -53,7 +53,7 @@ Some of the libraries used in the development of this web application are as fol
 	$/backend npm install
 	```
 
-####Frontend
+#### Frontend
 - cd into my-project and write npm install or npm i in command terminal
 
 	```
@@ -66,7 +66,7 @@ Some of the libraries used in the development of this web application are as fol
 	$/my-project npm start 
 	```
 
-###Working
+### Working
 #### HomePage
 ![](https://pandao.github.io/editor.md/examples/images/4.jpg)
 #### Login Page
