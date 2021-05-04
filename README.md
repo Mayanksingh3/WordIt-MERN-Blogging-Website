@@ -1,7 +1,7 @@
-#WordIt - MERN Blogging Website
+# WordIt - MERN Blogging Website
 Hello, Welcome to our Docs!
 
-##Getting Started
+## Getting Started
 **Table of Contents**
 
 [TOCM]
