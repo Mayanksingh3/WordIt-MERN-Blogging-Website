@@ -42,9 +42,9 @@ Some of the libraries used in the development of this web application are as fol
 - Fork this repo and run the git clone command from your terminal/bash
 - Create a `.env` file in the backend directory
 - mongoDB_URI - Insert the correct connection URL for your MongoDB database
-`mongodb+srv://<username>:<password>@<username>.fxrpe.mongodb.net/BlogDB?retryWrites=true&w=majority`
+  `mongodb+srv://<username>:<password>@<username>.fxrpe.mongodb.net/BlogDB?retryWrites=true&w=majority`
 - mongoDB_LOCAL - Insert the correct connection URL for your MongoDB database local
-`mongodb://localhost:27017/BlogDB`
+  `mongodb://localhost:27017/BlogDB`
 
 #### Backend
 
