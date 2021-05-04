@@ -1,12 +1,11 @@
 # WordIt - MERN Blogging Website
 Hello, Welcome to our Docs!
 
-## Getting Started
 ** Table of Contents **
 
-[ TOCM ]
+ [ TOC ]
 
-[ TOC ]
+## Getting Started
 
 ### Info :
 - WordIt is a MERN Blogging website.
