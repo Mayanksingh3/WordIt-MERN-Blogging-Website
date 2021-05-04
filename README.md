@@ -2,9 +2,22 @@
 
 Hello, Welcome to our Docs!
 
-** Table of Contents **
+###Table of Contents
 
-[ TOC ]
+- WordIt - MERN Blogging Website
+  - Getting Started
+    - Info
+    - Technologies Used
+    - Libraries Used
+  - Installation
+    - Backend
+    - Frontend
+  - Working
+    - HomePage
+    - Login Page
+    - SignUp Page
+    - Add Article Page
+    - Article Page
 
 ## Getting Started
 
