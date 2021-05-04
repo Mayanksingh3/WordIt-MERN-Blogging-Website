@@ -2,7 +2,7 @@
 
 Hello, Welcome to our Docs!
 
-###Table of Contents
+### Table of Contents
 
 - WordIt - MERN Blogging Website
   - Getting Started
@@ -57,8 +57,10 @@ Some of the libraries used in the development of this web application are as fol
 ## Installation
 
 - Fork this repo and run the git clone command from your terminal/bash
-- Create a `.env` file in the backend directory - mongoDB_URI - Insert the correct connection URL for your MongoDB database
-  `mongodb+srv://<username>:<password>@<username>.fxrpe.mongodb.net/BlogDB?retryWrites=true&w=majority` - mongoDB_LOCAL - Insert the correct connection URL for your MongoDB database local
+- Create a `.env` file in the backend directory
+- mongoDB_URI - Insert the correct connection URL for your MongoDB database
+  `mongodb+srv://<username>:<password>@<username>.fxrpe.mongodb.net/BlogDB?retryWrites=true&w=majority`
+- mongoDB_LOCAL - Insert the correct connection URL for your MongoDB database local
   `mongodb://localhost:27017/BlogDB`
 
 #### Backend
@@ -96,14 +98,18 @@ Some of the libraries used in the development of this web application are as fol
 
 ![](./my-project/src/assets/login2.PNG)
 
-#### SignUp Page
-
-![](./my-project/src/assets/signup.PNG)
-
 #### Add Article Page
 
 ![](./my-project/src/assets/add.PNG)
 
+#### SignUp Page
+
+![](./my-project/src/assets/signup.PNG)
+
 #### Article Page
 
 ![](./my-project/src/assets/article.PNG)
+
+### Edit/Delete
+
+![](./my-project/src/assets/edit.PNG)
