@@ -81,16 +81,16 @@ Some of the libraries used in the development of this web application are as fol
 
 #### Login Page
 
-![](https://pandao.github.io/editor.md/examples/images/4.jpg)
+![](./my-project/src/assets/login2.PNG)
 
 #### SignUp Page
 
-![](https://pandao.github.io/editor.md/examples/images/4.jpg)
+![](./my-project/src/assets/signup.PNG)
 
 #### Add Article Page
 
-![](https://pandao.github.io/editor.md/examples/images/4.jpg)
+![](./my-project/src/assets/add.PNG)
 
 #### Article Page
 
-![](https://pandao.github.io/editor.md/examples/images/4.jpg)
+![](./my-project/src/assets/article.PNG)
