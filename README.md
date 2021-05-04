@@ -2,23 +2,6 @@
 
 Hello, Welcome to our Docs!
 
-### Table of Contents
-
-- WordIt - MERN Blogging Website
-  - Getting Started
-    - Info
-    - Technologies Used
-    - Libraries Used
-  - Installation
-    - Backend
-    - Frontend
-  - Working
-    - HomePage
-    - Login Page
-    - SignUp Page
-    - Add Article Page
-    - Article Page
-
 ## Getting Started
 
 ### Info :
@@ -76,11 +59,10 @@ Some of the libraries used in the development of this web application are as fol
 
 - cd into my-project and write npm install or npm i in command terminal
 
-  ````
+  ```
   $ cd my-project
-  $/my-project npm install```
-
-  ````
+  $/my-project npm install
+  ```
 
 - Write npm start to start the react server
 
@@ -92,24 +74,36 @@ Some of the libraries used in the development of this web application are as fol
 
 #### HomePage
 
+User can view articles by other users and login/signup to our website.
+
 ![](./my-project/src/assets/homepage.PNG)
 
 #### Login Page
+
+User can login to our website. If user is not found, error is generated .
 
 ![](./my-project/src/assets/login2.PNG)
 
 #### Add Article Page
 
+After logging in user can post article or comment on other articles to our website.
+
 ![](./my-project/src/assets/add.PNG)
 
 #### SignUp Page
+
+User can signup to our website. No two user can have same email id.
 
 ![](./my-project/src/assets/signup.PNG)
 
 #### Article Page
 
+User can see full article and comment on the article.
+
 ![](./my-project/src/assets/article.PNG)
 
 ### Edit/Delete
+
+User can edit or delete their own posts.
 
 ![](./my-project/src/assets/edit.PNG)
