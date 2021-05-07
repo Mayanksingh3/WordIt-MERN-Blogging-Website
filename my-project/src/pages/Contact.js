@@ -17,7 +17,7 @@ export default function Contact() {
         </div>
         <div className="d-flex  mt-3">
           <img className="mr-3" src={me} alt="Developer" />
-          <div className="">
+          <div className="justifyparent">
             <div className="d-flex container-fluid justify-content-center">
               <h3>Mayank Kumar Singh</h3>
             </div>
@@ -61,7 +61,7 @@ export default function Contact() {
             </div>
 
             <h4>About Me :</h4>
-            <p>
+            <p className="contentjustify">
               Hi, My Name is Mayank Kumar Singh from Renukoot, Uttar Pradesh ,
               India. I am currently pursuing B.Tech. from GLA University,
               Mathura, India. I like creating and designing websites. This is our
@@ -82,7 +82,7 @@ export default function Contact() {
         </div> */}
         <div className="d-flex  mt-3">
           <img className="mr-3" src={ayush} alt="Developer" />
-          <div className="">
+          <div className="justifyparent">
             <div className="d-flex container-fluid justify-content-center">
               <h3>Ayush Gupta</h3>
             </div>
@@ -126,11 +126,11 @@ export default function Contact() {
             </div>
 
             <h4>About Me :</h4>
-            <p>
-              Hi, My Name is Ayush Gupta from Sitapur, Uttar Pradesh,
-              India. I am currently pursuing B.Tech. from GLA University,
-              Mathura, India. I am always keen to learn new things. Currently I am working on my web development skills.
-              This is our project for Fullstack Development -2 taught by Mr. Pankaj Kapoor (Technical Trainer).
+            <p className="contentjustify">
+              Hi, My Name is Ayush Gupta I am from Sitapur, Uttar Pradesh,
+              India. Currently pursuing B.Tech in Computer Science and Engineering from GLA University,
+              Mathura. I am always keen to learn new things. Currently I am working on my web development skills.
+              This is our project which we have made after learning MERN technology taught by Mr. Pankaj Kapoor (Technical Trainer).
             </p>
           </div>
         </div>
