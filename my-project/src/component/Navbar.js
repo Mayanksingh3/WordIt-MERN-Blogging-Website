@@ -6,26 +6,26 @@ import "../css/navbar.css";
 export default function Navbar() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-warning">
+      <nav className="navbar navbar-expand-lg navbar-light bg-primary">
         <div className="container-fluid">
           <ul className="nav navbar-nav">
             <li className="nav-item">
-              <Link to="/" className="nav-link" exact>
+              <Link to="/" className="nav-link text-light" exact>
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/about" className="nav-link" exact>
+              <Link to="/about" className="nav-link text-light" exact>
                 About
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/contact" className="nav-link" exact>
+              <Link to="/contact" className="nav-link text-light" exact>
                 Contact
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/docs" className="nav-link" exact>
+              <Link to="/docs" className="nav-link text-light" exact>
                 Docs
               </Link>
             </li>
