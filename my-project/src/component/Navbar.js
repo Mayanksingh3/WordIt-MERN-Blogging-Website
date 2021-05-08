@@ -6,7 +6,7 @@ import "../css/navbar.css";
 export default function Navbar() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-primary">
+      <nav className="navbar navbar-expand-lg navbar-light bg-warning">
         <div className="container-fluid">
           <ul className="nav navbar-nav">
             <li className="nav-item">
