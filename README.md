@@ -1,7 +1,10 @@
 # WordIt - MERN Blogging Website
 
 Hello, Welcome to our Docs!
-WordIt is a MERN Blogging App. MERN stands for MongoDB, Express, React, Node, after the four key technologies that make up the stack.
+
+WordIt is a MERN Blogging App.
+MERN stands for MongoDB, Express, React, Node, after the four key technologies that make up the stack.
+
 ![](./my-project/src/assets/mern.jpg)
 
 - MongoDB - document database.
