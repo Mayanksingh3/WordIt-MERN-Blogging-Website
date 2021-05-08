@@ -13,7 +13,7 @@ router.post("/signin", (req, res) => {
             id: foundUser._id,
           });
         } else {
-          console.log("User Entered Wrong Password");
+          console.log(req.body.email + " Entered Wrong Password");
           res.json({ isLogged: false });
         }
       } else {
@@ -46,8 +46,7 @@ router.post("/signup", (req, res) => {
   newUser
     .save()
     .then((e) => {
-      console.log("User added Successfully");
-      console.log(e);
+      console.log("User added Successfully " + e.username);
       res.send({ isLogged: true, id: e._id });
     })
     .catch((err) => {

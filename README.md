@@ -1,6 +1,13 @@
 # WordIt - MERN Blogging Website
 
 Hello, Welcome to our Docs!
+WordIt is a MERN Blogging App. MERN stands for MongoDB, Express, React, Node, after the four key technologies that make up the stack.
+![](./my-project/src/assets/mern.jpg)
+
+- MongoDB - document database.
+- Express(.js) - Node.js web framework.
+- React(.js) - a client-side JavaScript framework.
+- Node(.js) - the premier JavaScript web server.
 
 ## Getting Started
 
@@ -36,6 +43,7 @@ Some of the libraries used in the development of this web application are as fol
 - Dotenv - Dotenv is a zero-dependency module that loads environment variables from a . env file into process. env . Storing configuration in the environment separate from code is based on The Twelve-Factor App methodology.
 - mongoose - An ODM(Object Data Modelling)library for MongoDB and Node.js.
 - nodemon - nodemon is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory.
+- concurrently - Concurrently is a package which can run multiple npm scripts simultaneously.
 
 ## Installation
 
@@ -44,6 +52,7 @@ Some of the libraries used in the development of this web application are as fol
 - mongoDB_URI - Insert the correct connection URL for your MongoDB database
 
   `mongodb+srv://<username>:<password>@<username>.fxrpe.mongodb.net/BlogDB?retryWrites=true&w=majority`
+
 - mongoDB_LOCAL - Insert the correct connection URL for your MongoDB database local
 
   `mongodb://localhost:27017/BlogDB`
@@ -66,7 +75,7 @@ Some of the libraries used in the development of this web application are as fol
   $/my-project npm install
   ```
 
-- Write npm start to start the react server
+- Write npm start to start the react server and backend
 
   ```
   $/my-project npm start
