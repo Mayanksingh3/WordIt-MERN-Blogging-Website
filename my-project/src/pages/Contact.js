@@ -74,7 +74,7 @@ export default function Contact() {
         <hr />
         <div className="d-flex  mt-3">
           <img className="mr-3" src={ayush} alt="Developer" />
-          <div className="">
+          <div className="justifyparent">
             <div className="d-flex container-fluid justify-content-center">
               <h3>Ayush Gupta</h3>
             </div>
@@ -118,19 +118,18 @@ export default function Contact() {
             </div>
 
             <h4>About Me :</h4>
-            <p>
+            <p className="contentjustify">
               Hi, My Name is Ayush Gupta from Sitapur, Uttar Pradesh, India. I
               am currently pursuing B.Tech. from GLA University, Mathura, India.
               I am always keen to learn new things. Currently I am working on my
-              web development skills. This is our project for Fullstack
-              Development -2 taught by Mr. Pankaj Kapoor (Technical Trainer).
+              web development skills. This is our project on MERN technology taught by Mr. Pankaj Kapoor (Technical Trainer).
             </p>
           </div>
         </div>
         <hr />
         <div className="d-flex  mt-3">
           <img className="mr-3" src={priyam} alt="Developer" />
-          <div className="">
+          <div className="justifyparent">
             <div className="d-flex container-fluid justify-content-center">
               <h3>Priyam Srivastava</h3>
             </div>
@@ -174,10 +173,10 @@ export default function Contact() {
             </div>
 
             <h4>About Me :</h4>
-            <p>
-              Hi, My Name is Priyam Srivastava from Gorakhpur, Uttar Pradesh ,
+            <p className="contentjustify">
+              Hi, My Name is Priyam Srivastava from Gorakhpur, Uttar Pradesh,
               India. I am currently pursuing B.Tech. from GLA University,
-              Mathura, India. I like creating and designing websites. This is my
+              Mathura, India. I like creating and designing websites. This is our
               project for Fullstack Development -2 taught by Mr. Pankaj Kapoor
             </p>
           </div>
