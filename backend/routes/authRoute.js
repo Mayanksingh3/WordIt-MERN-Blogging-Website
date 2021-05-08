@@ -37,17 +37,18 @@ router.post("/signup", (req, res) => {
       if (found) {
         console.log("User Already Present with email : " + req.body.email);
         res.send({ isLogged: false });
+      } else {
+        newUser
+          .save()
+          .then((e) => {
+            console.log("User added Successfully " + e.email);
+            res.send({ isLogged: true, id: e._id });
+          })
+          .catch((err) => {
+            console.log(err);
+            res.send({ isLogged: false });
+          });
       }
-    })
-    .catch((err) => {
-      console.log(err);
-      res.send({ isLogged: false });
-    });
-  newUser
-    .save()
-    .then((e) => {
-      console.log("User added Successfully " + e.username);
-      res.send({ isLogged: true, id: e._id });
     })
     .catch((err) => {
       console.log(err);
