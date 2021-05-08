@@ -84,33 +84,33 @@ Some of the libraries used in the development of this web application are as fol
   $/my-project npm start
   ```
 
-### Working
+## Working
 
-#### HomePage
+### HomePage
 
 User can view articles by other users and login/signup to our website.
 
 ![](./my-project/src/assets/homepage.PNG)
 
-#### Login Page
+### Login Page
 
 User can login to our website. If user is not found, error is generated .
 
 ![](./my-project/src/assets/login2.PNG)
 
-#### Add Article Page
+### Add Article Page
 
 After logging in user can post article or comment on other articles to our website.
 
 ![](./my-project/src/assets/add.PNG)
 
-#### SignUp Page
+### SignUp Page
 
 User can signup to our website. No two user can have same email id.
 
 ![](./my-project/src/assets/signup.PNG)
 
-#### Article Page
+### Article Page
 
 User can see full article and comment on the article.
 
