@@ -119,10 +119,11 @@ export default function Contact() {
 
             <h4>About Me :</h4>
             <p>
-              Hi, My Name is Ayush Gupta from Sitapur, Uttar Pradesh , India. I
+              Hi, My Name is Ayush Gupta from Sitapur, Uttar Pradesh, India. I
               am currently pursuing B.Tech. from GLA University, Mathura, India.
-              I like creating and designing websites. This is my project for
-              Fullstack Development -2 taught by Mr. Pankaj Kapoor
+              I am always keen to learn new things. Currently I am working on my
+              web development skills. This is our project for Fullstack
+              Development -2 taught by Mr. Pankaj Kapoor (Technical Trainer).
             </p>
           </div>
         </div>
